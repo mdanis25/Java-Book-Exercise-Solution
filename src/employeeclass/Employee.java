@@ -40,8 +40,9 @@ public class Employee {
         return monthlySalary * 12;
     }
 
-    public double getYearlySalaryIncrease() {
-        return getYearlySalary() * 0.1;
+    public void giveRaise(double percentage) {
+        this.monthlySalary += (0 < percentage && percentage <=10) ? (monthlySalary * percentage) / 100 : 0.0;
     }
+     
 
 }
